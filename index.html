@@ -1,0 +1,42 @@
+<!--
+  Credit to: Nikolay Nemshilov ~ http://nikolay.rocks/2015-06-19-responsive-sidebar?utm_medium=email&utm_source=jsfiddle
+ -->
+<html>
+
+  <head>
+
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+  </head>
+  <body>
+
+    <div class="paddings">
+      <article>
+        Main article text
+      </article>
+
+      <aside>
+        <a class="toggler"></a>
+        <section class="about"> ... </section>
+        <section class="contacts"> ... </section>
+        <section class="categories"> ... </section>
+      </aside>
+
+    </div>
+
+  </body>
+
+  <script>
+
+    (function(document){
+      document.addEventListener("DOMContentLoaded", function(event) {
+        var toggler = document.querySelector('.toggler');
+        toggler.addEventListener('click', function() {
+            document.querySelector('aside').classList.toggle('open');
+        }, false);
+      });
+    }(document));
+
+  </script>
+
+</html>
